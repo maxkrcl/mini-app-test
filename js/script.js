@@ -1,5 +1,8 @@
 const tg = window.Telegram.WebApp;
 
+const mainButton = window.Telegram.WebApp.MainButton;
+mainButton.setText('Открыть расписание');
+
 const dayNamesRU = [
   'Воскресенье',
   'Понедельник',
