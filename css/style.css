@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: "Roboto", serif;
   font-weight: 400;
+  color: var(--tg-theme-text-color);
+  background-color: var(--tg-theme-bg-color);
 }
 
 main {
@@ -52,6 +54,7 @@ main {
 .day-date {
   font-size: 18px;
   font-weight: 300;
+  color: var(--tg-theme-subtitle-text-color);
 }
 
 .schedule {
