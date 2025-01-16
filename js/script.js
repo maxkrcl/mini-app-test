@@ -76,3 +76,10 @@ userInfo.innerHTML = `
     </li>
   </ul>
 `;
+
+const form = document.querySelector('form');
+form.addEventListener('submit', () => {
+  const data = new FormData(form);
+  const entries = Object.fromEntries(data.entries());
+  tg.sendData(JSON.stringify(entries));
+});
