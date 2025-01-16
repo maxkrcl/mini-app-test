@@ -145,4 +145,5 @@ input[type="submit"] {
   font-size: 18px;
   color: var(--tg-theme-button-text-color);
   background-color: var(--tg-theme-button-color);
+  border: none;
 }
