@@ -1,7 +1,5 @@
 const tg = window.Telegram.WebApp;
 
-console.log(JSON.stringify(tg.init, null, 2));
-
 const dayNamesRU = [
   'Воскресенье',
   'Понедельник',
@@ -43,3 +41,38 @@ userPhoto.setAttribute('src', tg.initDataUnsafe.user.photo_url);
 
 const userName = document.querySelector('.user-name');
 userName.textContent = tg.initDataUnsafe.user.first_name;
+
+
+function getAuthDate(seconds) {
+  const milliseconds = seconds * 1000;  // js работает с миллисекундами
+  const date = new Date(milliseconds);
+  const day = date.getDate().toString().padStart(2, '0');
+  const month = monthNamesRU[date.getMonth()];
+  const year = date.getFullYear();
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  return `${day} ${month} ${year} ${hours}:${minutes}`;
+}
+
+
+const userInfo = document.querySelector('.user-info');
+userInfo.innerHTML = `
+  <ul>
+    <li>
+      <span>auth_date:</span>
+      <span>${getAuthDate(tg.initDataUnsafe.auth_date)}</span>
+    </li>
+    <li>
+      <span>id:</span>
+      <span>${tg.initDataUnsafe.user.id}</span>
+    </li>
+    <li>
+      <span>first_name:</span>
+      <span>${tg.initDataUnsafe.user.first_name}</span>
+    </li>
+    <li>
+      <span>username:</span>
+      <span>${tg.initDataUnsafe.user.username}</span>
+    </li>
+  </ul>
+`;
