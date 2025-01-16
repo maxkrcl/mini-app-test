@@ -1,6 +1,6 @@
 const tg = window.Telegram.WebApp;
 
-console.log(tg.initData);
+console.log(JSON.stringify(tg.init, null, 2));
 
 const dayNamesRU = [
   'Воскресенье',
