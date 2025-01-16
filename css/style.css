@@ -128,12 +128,14 @@ label {
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px;
+  accent-color: var(--tg-theme-button-color);
 }
 
 input[type="range"] {
   width: 100%;
   height: 18px;
   margin: 0;
+  accent-color: var(--tg-theme-button-color);
   outline: none;
 }
 
