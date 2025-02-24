@@ -25,7 +25,7 @@ const monthNamesRU = [
   'Декабрь'
 ];
 
-console.log(window.location.search);
+console.log('window.location.search', window.location.search);
 
 const currentDate = new Date();  // объект даты
 
