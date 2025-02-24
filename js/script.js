@@ -26,6 +26,7 @@ const monthNamesRU = [
 ];
 
 console.log('window.location.search', window.location.search);
+document.querySelector('#test').textContent = window.location.search;
 
 const currentDate = new Date();  // объект даты
 
