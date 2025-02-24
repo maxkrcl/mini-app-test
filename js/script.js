@@ -25,6 +25,8 @@ const monthNamesRU = [
   'Декабрь'
 ];
 
+console.log(window.location.search);
+
 const currentDate = new Date();  // объект даты
 
 const dayTitle = document.querySelector('.day-title');
